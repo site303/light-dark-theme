@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(73, 73, 73);
+}
+
+
+.lightWrapper {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+ 
+  .darkWrapper {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+  }
+  

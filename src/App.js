@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeWrapper, ThemeContext } from './components/ThemeContext';
+import Info from './components/Header';
+import styles from './styles/Theme.module.css';
+import { useContext } from 'react';
 
+function ThemedApp() {
+  const { theme } = useContext(ThemeContext);
+  return (
+    <div className={`${styles.wrapper} ${theme === 'light' ? styles.lightWrapper : styles.darkWrapper}`}>
+      <Info />
+    </div>
+  );
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <ThemeWrapper className={`${styles.wrapper} ${styles.theme === 'light' ? styles.lightWrapper : styles.darkWrapper}`}>
+      <ThemedApp />
+   </ThemeWrapper>
   );
 }
 
